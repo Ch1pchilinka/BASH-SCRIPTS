@@ -1,0 +1,11 @@
+#!/bin/bash
+while true
+do
+    echo "What is your favourite department?"
+    read MOU
+    if [[ $MOU == "MOU" ]]
+    then 
+        exit
+    fi
+    clear
+done

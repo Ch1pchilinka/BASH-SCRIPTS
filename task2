@@ -1,0 +1,13 @@
+#!/bin/bash
+if [ $# -ne 1 ]
+then
+    echo "Введите ровно 1 параметр"
+    exit
+fi
+let "param = $1 + 0"
+if [ $? -eq 0 ]
+then
+    echo "Integer"
+else
+    echo "String"
+fi

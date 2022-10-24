@@ -1,0 +1,20 @@
+#!/bin/bash
+echo -e "1. ls\n2. pwd\n3. ls -l\n4. ps -fe"
+read param
+case $param in
+"1")
+    ls
+    ;;
+"2")
+    pwd
+    ;;
+"3")
+    ls -l
+    ;;
+"4")
+    ps -fe
+    ;;
+*)
+    echo "Choose number from diaposon 1-4"
+    ;;
+esac
