@@ -1,0 +1,15 @@
+#!/bin/bash
+let words=0
+let symbols=0
+let spaces=0
+while IFS="" read -r line
+do
+   let tmp=`echo -n $line | wc -w`
+   let words+=$tmp
+   let tmp=${#line}
+   let symbols+=$tmp
+   res=`tr -dc ' ' <<< $line | wc -c`
+   let spaces+=$res
+done
+let symbols-=$spaces
+echo "There are $words words in text, $symbols symbols and $spaces spaces."
