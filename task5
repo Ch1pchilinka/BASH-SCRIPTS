@@ -2,7 +2,7 @@
 let words=0
 let symbols=0
 let spaces=0
-while IFS="" read -r line
+while IFS="" read -r line || [ -n "$line" ]
 do
    let tmp=`echo -n $line | wc -w`
    let words+=$tmp
@@ -12,4 +12,5 @@ do
    let spaces+=$res
 done
 let symbols-=$spaces
+echo ""
 echo "There are $words words in text, $symbols symbols and $spaces spaces."
