@@ -1,0 +1,15 @@
+#!/bin/bash
+while true
+do
+    echo "What is your favourite department?"
+    read MOU
+    if [[ $MOU == "MOU" ]]
+    then 
+        echo "Good job!"
+        exit
+    fi
+    echo "Wrong answer!"
+    sleep 2
+    clear
+    echo "Think one more time."
+done
